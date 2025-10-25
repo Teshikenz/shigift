@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Ucapan | SHIGIFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>SHIGIFT</h1>
+      <p>Gift & Digital Moments</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="fotogift.html">Foto Gift</a></li>
+        <li><a href="giftcard.html">Gift Card</a></li>
+        <li><a href="webucapan.html" class="active">Web Ucapan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Produk Detail -->
+  <section class="product-detail fade-in">
+    <!-- Gambar Utama -->
+    <div class="main-image">
+      <img src="images/webucapan_main.jpg" alt="Web Ucapan Utama">
+    </div>
+
+    <!-- Judul & Deskripsi -->
+    <div class="detail-text">
+      <h2>Web Ucapan</h2>
+      <p>
+        Web ucapan digital SHIGIFT adalah cara modern untuk menyampaikan pesan spesial Anda.
+        Dengan desain yang elegan dan interaktif, setiap halaman ucapan dapat disesuaikan dengan foto, musik, 
+        dan teks pribadi. Cocok untuk ulang tahun, hari jadi, wisuda, maupun momen berharga lainnya.
+      </p>
+    </div>
+
+    <!-- Gallery / Contoh -->
+    <h3>Contoh & Macam-macam</h3>
+    <div class="product-gallery">
+      <div class="gallery-item">
+        <img src="images/webucapan1.jpg" alt="Contoh Web Ucapan 1">
+        <p>Ucapan A</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/webucapan2.jpg" alt="Contoh Web Ucapan 2">
+        <p>Ucapan B</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/webucapan3.jpg" alt="Contoh Web Ucapan 3">
+        <p>Ucapan C</p>
+      </div>
+    </div>
+
+    <!-- Tombol Bawah -->
+    <div class="bottom-buttons">
+      <a href="https://wa.me/6281234567890?text=Halo%20SHIGIFT,%20saya%20ingin%20memesan%20Web%20Ucapan" class="btn pesan-btn">Pesan Sekarang</a>
+      <a href="index.html" class="btn back-btn">Kembali ke Beranda</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SHIGIFT. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+  // Animasi fade-in saat scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>

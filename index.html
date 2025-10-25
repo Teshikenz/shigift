@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHIGIFT | Gift & Digital Moments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="fade-in">
+    <div class="logo">
+      <h1>SHIGIFT</h1>
+      <p>Gift & Digital Moments</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#products">Produk</a></li>
+        <li><a href="#testimonials">Testimoni</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section class="hero elegant-hero">
+  <div class="hero-content fade-in">
+    <h2>Temukan Hadiah Spesialmu di <span>SHIGIFT</span></h2>
+    <p>Kami menghadirkan pengalaman memberi hadiah yang elegan, bermakna, dan berkelas.</p>
+    <a href="#products" class="btn">Jelajahi Produk</a>
+  </div>
+</section>
+
+
+  <!-- Tentang Kami -->
+  <section class="about fade-in" id="about">
+    <div class="about-text">
+      <h2>Tentang SHIGIFT</h2>
+      <p>SHIGIFT adalah platform hadiah digital yang menghadirkan pengalaman eksklusif dan personal. 
+      Kami percaya setiap momen spesial pantas dirayakan dengan cara yang indah dan modern. 
+      Dari hadiah foto personal hingga kartu digital dan web ucapan interaktif, 
+      SHIGIFT hadir untuk membantu Anda mengungkapkan perasaan dengan cara yang lebih berkelas.</p>
+    </div>
+    <div class="about-image">
+      <img src="images/aboutgift.jpg" alt="Tentang SHIGIFT">
+    </div>
+  </section>
+
+  <!-- Produk Kami -->
+  <section class="products fade-in" id="products">
+    <h2>Produk Unggulan</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="images/fotogift1.jpg" alt="Foto Gift">
+        <h3>Foto Gift</h3>
+        <p>Hadiah personal berbasis foto untuk momen istimewa Anda.</p>
+        <a href="fotogift.html" class="btn">Lihat Produk</a>
+      </div>
+      <div class="product">
+        <img src="images/giftcard1.jpg" alt="Gift Card">
+        <h3>Gift Card</h3>
+        <p>Kartu hadiah digital berdesain elegan yang bisa disesuaikan.</p>
+        <a href="giftcard.html" class="btn">Lihat Produk</a>
+      </div>
+      <div class="product">
+        <img src="images/webucapan1.jpg" alt="Web Ucapan">
+        <h3>Web Ucapan</h3>
+        <p>Kirim ucapan spesial secara digital dengan tampilan interaktif.</p>
+        <a href="webucapan.html" class="btn">Lihat Produk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="testimonials fade-in" id="testimonials">
+    <h2>Apa Kata Pelanggan Kami</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>“Desainnya elegan banget, hasil foto giftnya berkualitas tinggi dan dikemas cantik. Recommended!”</p>
+        <h4>- Rina, Jakarta</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Gift card digitalnya keren! Bisa dikustom pakai nama dan ucapan, cocok buat hadiah mendadak.”</p>
+        <h4>- Dimas, Bandung</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Web ucapan ulang tahunnya bikin teman aku terharu! Simple tapi berkesan banget.”</p>
+        <h4>- Alya, Surabaya</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section class="contact fade-in" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Email: info@shigift.com</p>
+    <p>Instagram: <a href="#">@shigift</a></p>
+    <p>WhatsApp: +62 812-3456-7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SHIGIFT. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    // Animasi scroll fade-in
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>

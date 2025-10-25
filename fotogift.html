@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto Gift | SHIGIFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>SHIGIFT</h1>
+      <p>Gift & Digital Moments</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="fotogift.html" class="active">Foto Gift</a></li>
+        <li><a href="giftcard.html">Gift Card</a></li>
+        <li><a href="webucapan.html">Web Ucapan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Produk Detail -->
+  <section class="product-detail fade-in">
+    <!-- Gambar Utama -->
+    <div class="main-image">
+      <img src="images/fotogift_main.jpg" alt="Foto Gift Utama">
+    </div>
+
+    <!-- Judul & Deskripsi -->
+    <div class="detail-text">
+      <h2>Foto Gift</h2>
+      <p>
+        Koleksi <strong>Foto Gift</strong> dari SHIGIFT menghadirkan hadiah personal berbasis foto 
+        yang dirancang penuh makna. Setiap bingkai atau desain dibuat eksklusif agar momen spesial Anda 
+        menjadi kenangan yang tak terlupakan. Cocok untuk ulang tahun, pernikahan, dan perayaan lainnya.
+      </p>
+    </div>
+
+    <!-- Gallery -->
+    <h3>Contoh & Macam-macam</h3>
+    <div class="product-gallery">
+      <div class="gallery-item">
+        <img src="images/fotogift1.jpg" alt="Contoh Foto Gift 1">
+        <p>Foto Gift A</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/fotogift2.jpg" alt="Contoh Foto Gift 2">
+        <p>Foto Gift B</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/fotogift3.jpg" alt="Contoh Foto Gift 3">
+        <p>Foto Gift C</p>
+      </div>
+    </div>
+
+    <!-- Tombol Bawah -->
+    <div class="bottom-buttons">
+      <a href="https://wa.me/6281234567890?text=Halo%20SHIGIFT,%20saya%20ingin%20memesan%20Foto%20Gift" class="btn pesan-btn">Pesan Sekarang</a>
+      <a href="index.html" class="btn back-btn">Kembali ke Beranda</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SHIGIFT. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
